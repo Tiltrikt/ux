@@ -1,0 +1,12 @@
+<div class="container--outer">
+  <div class="container--inner">
+    @if (leftImage) {
+      <img class="container--image" [src]="imageAddress" alt="Image not found">
+      <span class="container--textbox">{{ text }}</span>
+    } @else {
+      <span class="container--textbox">{{ text }}</span>
+      <img class="container--image" [src]="imageAddress" alt="Image not found">
+    }
+  </div>
+  <button mat-button>{{ buttonText }}</button>
+</div>

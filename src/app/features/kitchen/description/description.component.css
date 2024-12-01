@@ -1,0 +1,44 @@
+.container--outer, .container--inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.container--outer {
+  padding: 0.5rem 0;
+  flex-direction: column;
+}
+
+.container--inner {
+  align-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.container--image {
+  border-radius: 1rem;
+  width: 480px;
+  height: 340px;
+  object-fit: cover;
+}
+
+.container--textbox {
+  display: flex;
+  flex-direction: column;
+  min-width: 14rem;
+  max-width: 27.5rem;
+  align-items: flex-start;
+  flex: 1 0 0;
+  gap: 1.5rem;
+}
+
+.container--text-header {
+  color: var(--mat-sys-on-surface-variant);
+  font: var(--mat-sys-title-large);
+}
+
+.container--text {
+  color: var(--mat-sys-on-surface-variant);
+  font: var(--mat-sys-body-large);
+}

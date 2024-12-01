@@ -1,0 +1,14 @@
+  <app-content>
+    <app-container title="Kuchyňa">
+      <app-description></app-description>
+    </app-container>
+    <app-container title="Raňajky">
+      <app-card-grid [menuItems]="getMenuItemsByCategory(MenuCategory.BREAKFAST)"></app-card-grid>
+    </app-container>
+    <app-container title="Obed">
+      <app-card-grid [menuItems]="getMenuItemsByCategory(MenuCategory.LUNCH)"></app-card-grid>
+    </app-container>
+    <app-container title="Večera">
+      <app-card-grid [menuItems]="getMenuItemsByCategory(MenuCategory.DINNER)"></app-card-grid>
+    </app-container>
+  </app-content>

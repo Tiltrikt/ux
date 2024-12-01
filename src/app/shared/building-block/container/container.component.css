@@ -1,0 +1,26 @@
+.container--outer {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--mat-sys-surface-container-low);
+  border-radius: 28px;
+}
+
+.container--top-app-bar {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+.container--top-app-bar-text {
+  color: var(--mat-sys-on-primary-container);
+  font: var(--mat-sys-headline-small);
+}
+
+.container--content {
+  width: 100%;
+}

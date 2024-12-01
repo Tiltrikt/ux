@@ -1,0 +1,14 @@
+.nav-item--icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: var(--mat-sys-on-secondary-container);
+}
+
+.nav-item--text {
+  align-self: stretch;
+  color: var(--mat-sys-on-secondary-container);
+  font: var(--mat-sys-label-medium);
+}

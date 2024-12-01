@@ -1,0 +1,14 @@
+.price--list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 8px;
+  gap: 32px 24px;
+}
+
+.price--item {
+  min-width: 200px;
+  max-width: 320px;
+  height: 150px;
+  flex: 1;
+}

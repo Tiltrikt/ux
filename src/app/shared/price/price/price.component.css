@@ -1,0 +1,23 @@
+.price--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100%;
+  border-radius: 16px;
+  background: var(--mat-sys-surface-container-high);
+}
+
+.price--primary-text, price--secondary-text {
+  color: var(--mat-sys-on-surface);
+  text-align: center;
+}
+
+.price--primary-text {
+  font: var(--mat-sys-display-medium);
+}
+
+.price--secondary-text {
+  font: var(--mat-sys-title-medium);
+}
