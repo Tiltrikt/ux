@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+
+.list-item--icon {
+  margin-top: 0.75rem !important;
+}
+
+.list-item--secondary-text {
+  max-width: 560px;
+  min-width: 240px;
+  flex-wrap: wrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  height: fit-content;
+}
+
+.list-item {
+  padding: 0.75rem !important;
+  height: fit-content !important;
+}
+
+.test {
+  position: relative !important;
+  display: flex !important;
+  margin-top: 10px !important;
+}
+
+.list {
+  @include mat.list-overrides((
+    list-item-label-text-color: var(--mat-sys-on-surface-variant),
+    list-item-hover-leading-icon-color: var(--mat-sys-on-surface-variant),
+    list-item-hover-label-text-color: var(--mat-sys-on-surface-variant),
+    list-item-label-text-size: var(--mat-sys-title-large-size),
+    list-item-supporting-text-size: var(--mat-sys-body-large-size)
+  ));
+  @include mat.divider-overrides((
+    color: var(--mat-sys-outline-variant),
+  ));
+}
+
+.demo-inline-calendar-card {
+  width: 300px;
+}
+
+//.hidden-input {
+//  display: none;
+//}

@@ -1,0 +1,22 @@
+<app-page-content>
+  <img alt="Home image" class="image--main" src="home.png">
+  <app-page-container [title]="'page.home.section.about.title' | translate">
+    <app-learn-more-container
+      [text]="'page.home.section.about.description' | translate"
+      imageAddress="about-home.webp">
+    </app-learn-more-container>
+  </app-page-container>
+  <app-page-container [title]="'page.home.section.kitchen.title' | translate">
+    <app-learn-more-container
+      [leftImage]="false"
+      [text]="'page.home.section.kitchen.description' | translate"
+      imageAddress="kitchen.jpg">
+    </app-learn-more-container>
+  </app-page-container>
+  <app-page-container [title]="'page.home.section.reservation.title' | translate">
+    <app-learn-more-container
+      [text]="'page.home.section.reservation.description' | translate"
+      imageAddress="room.webp">
+    </app-learn-more-container>
+  </app-page-container>
+</app-page-content>

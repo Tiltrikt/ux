@@ -1,0 +1,35 @@
+<app-page-content>
+  <app-page-container [title]="'page.booking.section.pricing.title' | translate">
+    <app-price-item-list></app-price-item-list>
+  </app-page-container>
+  <app-page-container [title]="'page.booking.section.reservationRules.title' | translate">
+    <mat-list class="list">
+      @for (rule of reservationRules$ | async; track $index) {
+        <mat-list-item class="list-item">
+          <mat-icon class="list-item--icon" matListItemIcon>{{ rule.icon }}</mat-icon>
+          <span matListItemTitle>{{ rule.title }}</span>
+          <span class="list-item--secondary-text" matListItemLine>{{ rule.description }}</span>
+        </mat-list-item>
+        @if (!$last) {
+          <mat-divider></mat-divider>
+        }
+      }
+    </mat-list>
+  </app-page-container>
+  <app-page-container [title]="'page.booking.section.kitchen.title' | translate">
+    <app-learn-more-container
+      [text]="'page.booking.section.kitchen.description' | translate"
+      imageAddress="kitchen.jpg">
+
+    </app-learn-more-container>
+  </app-page-container>
+  <app-page-container>
+    <app-contact-info></app-contact-info>
+    <!--      <mat-date-range-input [formGroup]="range" [rangePicker]="picker" class="hidden-input">-->
+    <!--        <input matStartDate formControlName="start" placeholder="Start date">-->
+    <!--        <input matEndDate formControlName="end" placeholder="End date">-->
+    <!--      </mat-date-range-input>-->
+    <!--    <mat-date-range-picker class="test" #picker [opened]="true"></mat-date-range-picker>-->
+  </app-page-container>
+</app-page-content>
+

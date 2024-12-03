@@ -1,0 +1,51 @@
+<div
+  (focusin)="onFocusIn()"
+  (focusout)="onFocusOut($event)"
+  [attr.aria-labelledby]="_formField?.getLabelId()"
+  [formGroup]="parts"
+  class="tel-input--container"
+  role="group"
+>
+  <input
+    #country
+    (input)="_onInput($event, parts.controls.country, area)"
+    aria-label="Country code"
+    class="tel-input--element"
+    formControlName="country"
+    maxLength="3"
+    size="3"
+  />
+  <mat-divider [vertical]="true" class="tel-input--spacer"></mat-divider>
+  <input
+    #area
+    (input)="_onInput($event, parts.controls.area, exchange)"
+    (keyup.backspace)="autoFocusPrev(parts.controls.area, country)"
+    aria-label="Area code"
+    class="tel-input--element"
+    formControlName="area"
+    maxLength="3"
+    size="3"
+  />
+  <span class="tel-input--spacer">&ndash;</span>
+  <input
+    #exchange
+    (input)="_onInput($event, parts.controls.exchange, subscriber)"
+    (keyup.backspace)="autoFocusPrev(parts.controls.exchange, area)"
+    aria-label="Exchange code"
+    class="tel-input--element"
+    formControlName="exchange"
+    maxLength="3"
+    size="3"
+  />
+  <span class="tel-input--spacer">&ndash;</span>
+  <input
+    #subscriber
+    (input)="_onInput($event, parts.controls.subscriber)"
+    (keyup.backspace)="autoFocusPrev(parts.controls.subscriber, exchange)"
+    aria-label="Subscriber number"
+    class="tel-input--element"
+    formControlName="subscriber"
+    maxLength="4"
+    size="4"
+  />
+</div>

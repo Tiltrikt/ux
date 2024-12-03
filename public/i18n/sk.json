@@ -1,0 +1,76 @@
+{
+  "page": {
+    "kitchen": {
+      "title": "Kuchyňa",
+      "description": "Slovensko je bohaté nielen na prírodné krásy, ale tiež oplýva rozmanitými chuťami a vôňami jedál. U nás máte možnosť vybrať si z ponuky tradičných slovenských jedál, pripravovaných nielen s láskou, ale aj z čerstvých surovín podľa receptov našich starých mám. Nie sme podporovateľmi mrazených polotovarov, ale chutných poctivých jedál. Všetky naše polievky sú bezlepkové. Podporujeme slovenských producentov, ktorí nám dodávajú kvalitné suroviny a výrobky. Z nápojov určite ochutnajte bylinkový čaj, ktorý je lahodnou kombináciou liečivých rastlín. Čapujeme biologické pivo Martins 12° varené v miestnom martinskom rodinnom pivovare. Raňajky vydávame v čase od 07:30 – 08:30 hod. Kuchyňa varí do 20:30 hod. Nie je potrebná objednávka jedla dopredu. Našu výbornú kuchyňu môžu ochutnať nielen ubytovaní hostia ale aj stanujúci.",
+      "section": {
+        "breakfast": "Raňajky",
+        "lunch": "Obed",
+        "dinner": "Večera"
+      }
+    },
+    "home": {
+      "section": {
+        "about": {
+          "title": "O chate",
+          "description": "Na chate sa môžete občerstviť denne od 08:00 – 22:00. Máte možnosť vybrať si z ponuky tradičných slovenských jedál, pripravovaných nielen s láskou, ale aj z čerstvých surovín podľa receptov našich starých mám."
+        },
+        "kitchen": {
+          "title": "Kuchyňa",
+          "description": "Na chate sa môžete občerstviť denne od 08:00 – 22:00. Máte možnosť vybrať si z ponuky tradičných slovenských jedál, pripravovaných nielen s láskou, ale aj z čerstvých surovín podľa receptov našich starých mám."
+        },
+        "reservation": {
+          "title": "Rezervácie",
+          "description": "Naša chata vám ponúka možnosť rezervácie izieb. Rezerváciu môžete uskutočniť telefonicky alebo online prostredníctvom našej webovej stránky. Ak máte špeciálne požiadavky, radi vám ich pomôžeme splniť."
+        }
+      }
+    },
+    "booking": {
+      "section": {
+        "pricing": {
+          "title": "Cenník"
+        },
+        "kitchen": {
+          "title": "Kuchyňa",
+          "description": "Na chate sa môžete občerstviť denne od 08:00 – 22:00. Máte možnosť vybrať si z ponuky tradičných slovenských jedál, pripravovaných nielen s láskou, ale aj z čerstvých surovín podľa receptov našich starých mám."
+        },
+        "reservationRules": {
+          "title": "Všeobecné pravidlá",
+          "ruleList": [
+            {
+              "icon": "login",
+              "title": "Príchod",
+              "description": "Check-in je možný od 14:00 hod. Pri registrácii je potrebné predložiť preukaz totožnosti a kreditnú kartu."
+            },
+            {
+              "icon": "logout",
+              "title": "Odchod",
+              "description": "Odchod je potrebné vykonať do 12:00 hod. V prípade neskorého odchodu môže byť účtovaný poplatok."
+            },
+            {
+              "icon": "payment",
+              "title": "Platba",
+              "description": "Platba za ubytovanie a služby sa vyžaduje pri príchode alebo vopred pri rezervácii. Storno podmienky závisia od typu rezervácie. Podrobnosti nájdete v potvrdení rezervácie."
+            },
+            {
+              "icon": "pets",
+              "title": "Domáce zvieratá",
+              "description": "Pobyt s domácimi zvieratami je nepovolený."
+            },
+            {
+              "icon": "smoke_free",
+              "title": "Fajčenie",
+              "description": "Všetky izby a verejné priestory hotela sú nefajčiarske. Fajčenie je povolené len v označených vonkajších priestoroch."
+            },
+            {
+              "icon": "info",
+              "title": "Poškodenie majetku",
+              "description": "Hostia sú zodpovední za akékoľvek poškodenie majetku hotela spôsobené ich správaním. Náklady na opravu alebo výmenu poškodeného majetku môžu byť účtované hosťovi."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+

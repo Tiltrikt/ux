@@ -1,0 +1,9 @@
+<div class="card-grid--flexbox">
+  @for (menuItem of menuItems; track $index) {
+    <app-card-item class="card--item"
+                   imageAddress="{{menuItem.imageAddress}}"
+                   secondaryText="{{menuItem.description}}"
+                   primaryText="{{menuItem.price}}"
+    ></app-card-item>
+  }
+</div>

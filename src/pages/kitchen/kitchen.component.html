@@ -1,0 +1,15 @@
+<app-page-content>
+  <app-page-container [title]="'page.kitchen.title' | translate">
+    <app-page-description [text]="'page.kitchen.description' | translate"
+                          imageAddress="kitchen.jpg"></app-page-description>
+  </app-page-container>
+  <app-page-container [title]="'page.kitchen.category.breakfast' | translate">
+    <app-card-grid [menuItems]="getMenuItemsByCategory(MenuCategory.BREAKFAST)"></app-card-grid>
+  </app-page-container>
+  <app-page-container [title]="'page.kitchen.category.lunch' | translate">
+    <app-card-grid [menuItems]="getMenuItemsByCategory(MenuCategory.LUNCH)"></app-card-grid>
+  </app-page-container>
+  <app-page-container [title]="'page.kitchen.category.dinner' | translate">
+    <app-card-grid [menuItems]="getMenuItemsByCategory(MenuCategory.DINNER)"></app-card-grid>
+  </app-page-container>
+</app-page-content>
