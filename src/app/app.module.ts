@@ -7,6 +7,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {KitchenModule} from "../pages/kitchen/kitchen.module";
 import {HomeModule} from "../pages/home/home.module";
 import {BookingModule} from "../pages/booking/booking.module";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/i18n/', '.json');
@@ -32,6 +33,9 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
+  providers: [
+    provideAnimationsAsync()
+  ],
 })
 export class AppModule {
 }

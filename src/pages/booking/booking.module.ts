@@ -14,7 +14,8 @@ import {MatCardModule} from '@angular/material/card';
 import {PriceModule} from '../../shared/components/price/price.module';
 import {TranslatePipe} from '@ngx-translate/core';
 import {LearnMoreContainerComponent} from '../../shared/components/learn-more-container/learn-more-container.component';
-import {ContactInfoComponent} from '../../shared/components/contact-info/contact-info.component';
+import {ReservationFormComponent} from '../../shared/components/reservation-form/reservation-form.component';
+import {ReservationFormModule} from '../../shared/components/reservation-form/reservation-form.module';
 
 @NgModule({
   declarations: [BookingComponent],
@@ -25,7 +26,7 @@ import {ContactInfoComponent} from '../../shared/components/contact-info/contact
     MatListModule,
     PageBuildingBlocksModule,
     PriceModule,
-    ContactInfoComponent,
+    ReservationFormModule,
     LearnMoreContainerComponent,
     MatFormFieldModule,
     MatDatepickerModule,
