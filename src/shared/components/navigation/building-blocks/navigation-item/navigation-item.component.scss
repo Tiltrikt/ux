@@ -16,7 +16,16 @@
   align-items: stretch;
   border-radius: 100px;
   height: 56px;
-  background-color: red;
+  transition: background-color 0.2s ease;
+  flex-grow: 1;
+}
+
+.container-long:hover {
+  background-color: rgba(#44474e, 0.08);
+}
+
+.container-long:active {
+  background-color: rgba(#44474e, 0.12);
 }
 
 .content-area {
@@ -30,6 +39,8 @@
 }
 
 .icon-area {
+  padding: 4px 16px;
+
   border-radius: 100px;
   justify-content: center;
   align-items: center;
@@ -43,7 +54,6 @@
 
 .icon {
   display: flex;
-  padding: 4px 16px;
   justify-content: center;
   color: var(--mat-sys-on-surface-variant);
 }
@@ -52,4 +62,8 @@
   font: var(--mat-sys-label-medium);
   align-self: stretch;
   color: var(--mat-sys-on-surface-variant);
+}
+
+text-area-long {
+  align-self: center;
 }
