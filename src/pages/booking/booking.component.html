@@ -23,8 +23,8 @@
 
     </app-learn-more-container>
   </app-page-container>
-  <app-page-container>
-    <app-reservation-form></app-reservation-form>
+  <app-page-container [title]="'page.booking.section.reservationForm.title' | translate">
+    <app-reservation-form/>
     <!--      <mat-date-range-input [formGroup]="range" [rangePicker]="picker" class="hidden-input">-->
     <!--        <input matStartDate formControlName="start" placeholder="Start date">-->
     <!--        <input matEndDate formControlName="end" placeholder="End date">-->

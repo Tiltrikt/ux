@@ -18,7 +18,7 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-flow: column nowrap;
   flex: 1;
   padding-bottom: 8px;
-  gap: 32px;
+  gap: 16px;
 }
 
 .mat-radio-button {
@@ -32,4 +32,34 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.checkbox {
+  margin-left: -8px;
+  margin-top: -16px;
+  margin-bottom: 16px;
+}
+
+.container--outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: self-start;
+  flex-grow: 1;
+  gap: 64px;
+  margin: 24px 0;
+}
+
+.calendar {
+  background-color: var(--mat-sys-surface-container-high);
+  width: 360px;
+  border-radius: 28px;
+  min-width: 360px;
+}
+
+.contact-info {
+  min-width: 250px;
+  max-width: 360px;
+  flex-grow: 1;
 }

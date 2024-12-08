@@ -1,0 +1,33 @@
+.container--outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: self-start;
+  flex-grow: 1;
+  gap: 64px;
+  margin: 24px 0;
+}
+
+.calendar {
+  background-color: var(--mat-sys-surface-container-high);
+  width: 360px;
+  border-radius: 28px;
+  min-width: 360px;
+}
+
+.contact-info {
+  min-width: 250px;
+  max-width: 360px;
+  flex-grow: 1;
+}
+
+.button {
+  align-self: flex-end;
+  margin-bottom: 16px;
+}
+
+.reservation-form--container {
+  display: flex;
+  flex-direction: column;
+}

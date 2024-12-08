@@ -6,6 +6,7 @@
   align-self: stretch;
   background-color: var(--mat-sys-surface-container-low);
   border-radius: 28px;
+  min-width: fit-content;
 }
 
 .container--top-app-bar {

@@ -8,6 +8,10 @@ import {KitchenModule} from "../pages/kitchen/kitchen.module";
 import {HomeModule} from "../pages/home/home.module";
 import {BookingModule} from "../pages/booking/booking.module";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {RouterModule, RouterOutlet} from '@angular/router';
+import {routes} from './app.routes';
+import {NavigationModule} from '../shared/components/navigation/navigation.module';
+import {MatButton} from '@angular/material/button';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/i18n/', '.json');
@@ -30,6 +34,10 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     HomeModule,
     BookingModule,
+    RouterOutlet,
+    RouterModule.forRoot(routes),
+    NavigationModule,
+    MatButton
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
