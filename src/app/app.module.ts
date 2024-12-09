@@ -11,10 +11,11 @@ import {provideAnimationsAsync} from '@angular/platform-browser/animations/async
 import {RouterModule, RouterOutlet} from '@angular/router';
 import {routes} from './app.routes';
 import {NavigationModule} from '../shared/components/navigation/navigation.module';
-import {MatButton} from '@angular/material/button';
+import {MatButton, MatButtonModule, MatIconButton} from '@angular/material/button';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/i18n/', '.json');
@@ -48,7 +49,10 @@ export function createTranslateLoader(http: HttpClient) {
     MatSidenav,
     MatSidenavContainer,
     MatSidenavContent,
-    MatIconModule
+    MatIconModule,
+    MatIconButton,
+    MatToolbarModule,
+    MatButtonModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

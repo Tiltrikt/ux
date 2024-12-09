@@ -1,11 +1,11 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 
 import {HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
-import {NavigationEnd, Router, Scroll} from '@angular/router';
-import {filter, map} from 'rxjs';
+import {Subject, takeUntil} from 'rxjs';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '', '.json');
@@ -15,12 +15,16 @@ export function HttpLoaderFactory(http: HttpClient) {
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ux';
+  title: string = 'ux';
+
+  openedNavigation: boolean = true
 
   public isSidenavOpen = signal(false);
+
+  destroyed = new Subject<void>();
 
   constructor(private iconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer
@@ -29,10 +33,18 @@ export class AppComponent {
       'house_icon_ttt',
       this.domSanitizer.bypassSecurityTrustResourceUrl('house_icon_ttt.svg')
     );
+
+    inject(BreakpointObserver)
+      .observe([Breakpoints.XSmall])
+      .pipe(takeUntil(this.destroyed))
+      .subscribe(result => {
+        this.openedNavigation = !result.matches;
+      });
   }
 
   toggleSideNav(open: boolean) {
-    this.isSidenavOpen.update(b => open);
+    if (this.openedNavigation) {
+      this.isSidenavOpen.update(() => open);
+    }
   }
-
 }

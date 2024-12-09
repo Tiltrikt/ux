@@ -1,12 +1,7 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ReservationRule} from './model/reservation-rule';
 import {TranslateService} from '@ngx-translate/core';
 import {Observable} from 'rxjs';
-import {Router} from '@angular/router';
-
-const today = new Date();
-const month = today.getMonth();
-const year = today.getFullYear();
 
 @Component({
   selector: 'app-booking',
@@ -19,7 +14,7 @@ export class BookingComponent implements OnInit {
 
   reservationRules$?: Observable<ReservationRule[]>;
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(private translate: TranslateService) {
   }
 
   ngOnInit(): void {

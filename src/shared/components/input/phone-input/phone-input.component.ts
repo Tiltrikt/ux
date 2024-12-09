@@ -39,6 +39,10 @@ export class MyTel {
     public subscriber: string,
   ) {
   }
+
+  toString(): string {
+    return `+${this.country} (${this.area}) ${this.exchange}-${this.subscriber}`;
+  }
 }
 
 /** Custom `MatFormFieldControl` for telephone number input. */
@@ -130,7 +134,7 @@ export class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyT
       this.stateChanges.next();
     });
 
-    this.parts.valueChanges.pipe(takeUntilDestroyed()).subscribe(value => {
+    this.parts.valueChanges.pipe(takeUntilDestroyed()).subscribe(() => {
       const tel = this.parts.valid
         ? new MyTel(
           this.parts.value.country || '',

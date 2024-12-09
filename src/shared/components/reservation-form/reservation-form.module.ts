@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, provideZoneChangeDetection} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {
@@ -26,7 +26,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   providers: [{
     provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
     useClass: DefaultMatCalendarRangeStrategy
-  }]
+  },
+    provideZoneChangeDetection({eventCoalescing: true})]
 })
 export class ReservationFormModule {
 }

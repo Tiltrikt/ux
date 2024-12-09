@@ -11,28 +11,28 @@ import {NavigationItemComponent} from "./building-blocks/navigation-item/navigat
 
 
 @NgModule({
-    declarations: [
-        NavigationListComponent,
-        NavigationItemComponent
-    ],
-    exports: [
-        NavigationItemComponent,
-        NavigationListComponent
-    ],
-    imports: [
-        CommonModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        RouterOutlet,
-        MatNavList,
-        MatIcon,
-        MatListItem,
-        RouterLink,
-        RouterLinkActive
-    ]
+  declarations: [
+    NavigationListComponent,
+    NavigationItemComponent
+  ],
+  exports: [
+    NavigationItemComponent,
+    NavigationListComponent
+  ],
+  imports: [
+    CommonModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    RouterOutlet,
+    MatNavList,
+    MatIcon,
+    MatListItem,
+    RouterLink,
+    RouterLinkActive
+  ]
 })
 export class NavigationModule {
 }

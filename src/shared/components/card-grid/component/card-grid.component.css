@@ -13,3 +13,14 @@
   height: 280px;
   flex: 1;
 }
+
+@media (max-width: 600px) {
+  .card-grid--flexbox {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: calc(100vw - 2rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}

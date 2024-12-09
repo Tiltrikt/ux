@@ -4,27 +4,19 @@
   justify-content: stretch;
   align-items: center;
   padding: 3rem 12rem 1.5rem;
-  min-width: fit-content;
 }
 
 @media (max-width: 1200px) {
   .content--flex-container {
     padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media (max-width: 840px) {
-  .content--flex-container {
-    padding-left: 6rem;
     padding-right: 6rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .content--flex-container {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 

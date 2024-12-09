@@ -1,1 +1,22 @@
-<p>dialog works!</p>
+<mat-icon class="icon">mail_outlined</mat-icon>
+<h2 class="primary-text" mat-dialog-title>Potvrdenie bolo zaslané na váš email</h2>
+<span class="secondary-text">V prípade, že ste nedostali email skontrolujte údaje a skúste ešte raz.</span>
+<mat-dialog-content>
+  <mat-list class="list" role="list">
+    <mat-list-item role="listitem">Meno: {{ contactForm.firstName }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item role="listitem">Priezvisko: {{ contactForm.lastName }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item role="listitem">Telefónne číslo: {{ contactForm.phoneNumber.toString() }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item role="listitem">Email: {{ contactForm.email }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item role="listitem">Počet osôb: {{ contactForm.personCount }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item role="listitem">Dátumy: {{ formatDateRange(contactForm.dateRange) }}</mat-list-item>
+  </mat-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Skúsiť znovu</button>
+  <button [routerLink]="'/about-home'" mat-button mat-dialog-close routerLinkActive="active">Dostal som email</button>
+</mat-dialog-actions>

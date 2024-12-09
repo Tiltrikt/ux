@@ -1,12 +1,16 @@
-.home {
-  height: 100%;
-}
-
 .sidenav-colored {
   height: 100%;
   background-color: var(--mat-sys-surface-container);
   border-radius: 0;
   position: fixed;
+}
+
+.toolbar {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: var(--mat-sys-surface-container);
+  z-index: 1000;
 }
 
 .rail {
@@ -17,4 +21,13 @@
   width: 320px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.32), 0 4px 8px rgba(0, 0, 0, 0.28);
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-menu-toggle {
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
 }

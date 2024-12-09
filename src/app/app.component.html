@@ -1,17 +1,31 @@
-<mat-sidenav-container autosize="true" hasBackdrop="false">
-  <mat-sidenav (mouseenter)="toggleSideNav(true)"
+<mat-sidenav-container [hasBackdrop]="!openedNavigation" autosize="true">
+  <mat-sidenav #drawer
+               (mouseenter)="toggleSideNav(true)"
                (mouseleave)="toggleSideNav(false)"
-               [class.expanded]="isSidenavOpen()"
+               [class.expanded]="isSidenavOpen() && openedNavigation"
                [class.rail]="!isSidenavOpen()"
-               [opened]="true"
+               [opened]="openedNavigation"
                class="sidenav-colored expanded rail"
                mode="over">
+    @if (!openedNavigation) {
+      <button mat-icon-button class="navigation-menu-toggle" aria-label="Example icon-button with menu icon"
+              (click)="drawer.toggle()">
+        <mat-icon>menu_open</mat-icon>
+      </button>
+    }
     <app-navigation-list [fullWidthNavItems]="isSidenavOpen"/>
-
   </mat-sidenav>
-
   <mat-sidenav-content>
+    @if (!openedNavigation) {
+      <mat-toolbar class="toolbar">
+        <button mat-icon-button aria-label="Example icon-button with menu icon"
+                (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="toolbar-spacer"></span>
+        <span>Horská chata Lajoška</span>
+      </mat-toolbar>
+    }
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-
 </mat-sidenav-container>

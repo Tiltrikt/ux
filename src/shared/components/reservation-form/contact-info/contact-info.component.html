@@ -1,10 +1,26 @@
 <div class="container--outer">
-  <mat-calendar (selectedChange)="onSelect($event)"
-                [selected]="contactForm.controls['dateRange'].value"
-                class="calendar">
-  </mat-calendar>
+  @if (!smallScreen) {
+    <mat-calendar (selectedChange)="onSelect($event)"
+                  [selected]="dateRange"
+                  class="calendar">
+    </mat-calendar>
+  }
   <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="contact-info" novalidate>
     <mat-card-content class="input--container-outer">
+      @if (smallScreen) {
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [formGroup]="contactForm" [rangePicker]="picker">
+              <input matStartDate formControlName="startDate" placeholder="Príchod">
+              <input matEndDate formControlName="endDate" placeholder="Odchod">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+      }
       <div class="row">
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Meno</mat-label>

@@ -24,9 +24,7 @@
 
     </app-learn-more-container>
   </app-page-container>
-  <app-page-container id="reservation-form" [title]="'page.booking.section.reservationForm.title' | translate">
+  <app-page-container [title]="'page.booking.section.reservationForm.title' | translate" id="reservation-form">
     <app-reservation-form/>
   </app-page-container>
 </app-page-content>
-
-<button mat-button (click)="openDialog()">Launch dialog</button>

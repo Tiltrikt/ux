@@ -49,49 +49,49 @@ export class StaticDataSource {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.LUNCH
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.LUNCH
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.LUNCH
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.LUNCH
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.LUNCH
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.DINNER
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.DINNER
     },
     {
       imageAddress: "DSC_0820-min.jpg",
       description: "Praženica s oravskou slaninou",
       price: "€5",
-      category: MenuCategory.BREAKFAST
+      category: MenuCategory.DINNER
     },
   ];
 

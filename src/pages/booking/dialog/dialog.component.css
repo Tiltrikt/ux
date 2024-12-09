@@ -1,0 +1,22 @@
+.icon {
+  color: var(--mat-sys-secondary);
+  align-self: center;
+  margin-top: 24px
+}
+
+.primary-text {
+  align-self: center;
+}
+
+.secondary-text {
+  margin: 0 24px;
+  flex-wrap: wrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  font: var(--mat-sys-body-medium);
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.list {
+  color: var(--mat-sys-on-surface);
+}
