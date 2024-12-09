@@ -8,6 +8,7 @@
   </app-page-container>
   <app-page-container [title]="'page.home.section.kitchen.title' | translate">
     <app-learn-more-container
+      [buttonLink]="'/kitchen'"
       [leftImage]="false"
       [text]="'page.home.section.kitchen.description' | translate"
       imageAddress="kitchen.jpg">
@@ -15,6 +16,7 @@
   </app-page-container>
   <app-page-container [title]="'page.home.section.reservation.title' | translate">
     <app-learn-more-container
+      [buttonLink]="'/booking'"
       [text]="'page.home.section.reservation.description' | translate"
       imageAddress="room.webp">
     </app-learn-more-container>

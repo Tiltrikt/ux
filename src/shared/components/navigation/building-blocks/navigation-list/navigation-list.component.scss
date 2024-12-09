@@ -1,0 +1,50 @@
+@use '@angular/material' as mat;
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /*padding: 0.75rem;*/
+}
+
+.nav-item-expanded {
+  justify-content: left;
+}
+
+.nav-item-height {
+  height: 56px !important;
+}
+
+.nav-list {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4px;
+}
+
+.fab {
+  box-shadow: none;
+  background-color: var(--mat-sys-tertiary-container);
+  align-self: center;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.fab:focus {
+  box-shadow: none;
+}
+
+.fab-expanded {
+  margin-left: 4px;
+  box-shadow: none;
+  background-color: var(--mat-sys-tertiary-container);
+  justify-content: left;
+  width: fit-content;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.fab-expanded:hover {
+  box-shadow: none;
+}

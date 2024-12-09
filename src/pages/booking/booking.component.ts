@@ -1,7 +1,8 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ReservationRule} from './model/reservation-rule';
 import {TranslateService} from '@ngx-translate/core';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 const today = new Date();
 const month = today.getMonth();
@@ -18,15 +19,10 @@ export class BookingComponent implements OnInit {
 
   reservationRules$?: Observable<ReservationRule[]>;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
   }
 
   ngOnInit(): void {
     this.reservationRules$ = this.translate.get('page.booking.section.reservationRules.ruleList');
   }
-
-  // readonly range = new FormGroup({
-  //   start: new FormControl<Date | null>(null),
-  //   end: new FormControl<Date | null>(null),
-  // });
 }

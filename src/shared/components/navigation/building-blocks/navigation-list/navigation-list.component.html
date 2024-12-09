@@ -1,7 +1,44 @@
-<mat-nav-list aria-label="Navigation sidebar">
-  @for (navItem of navItems; track navItem) {
-      <a class="nav-link">
-        <app-navigation-item [fullWidthNavItems]="fullWidthNavItems"/>
-      </a>
+<mat-nav-list aria-label="Navigation sidebar" class="nav-list">
+
+  @if (fullWidthNavItems()) {
+    <button mat-fab extended class="fab-expanded" [routerLink]="'/booking'" fragment="reservation-form">
+      <mat-icon>bed</mat-icon>
+      Rezervovať
+    </button>
+  } @else {
+    <button mat-fab class="fab">
+      <mat-icon>bed</mat-icon>
+    </button>
   }
+
+  <a [routerLink]="'/about-home'" class="nav-item-height" mat-list-item routerLinkActive="active">
+        <span [class.nav-item-expanded]="fullWidthNavItems()"
+              class="nav-item nav-item-expanded"
+        >
+          <mat-icon>info_outline</mat-icon>
+          @if (fullWidthNavItems()) {
+            <span>O Chate</span>
+          }
+        </span>
+  </a>
+  <a [routerLink]="'/kitchen'" class="nav-item-height" mat-list-item routerLinkActive="active">
+        <span [class.nav-item-expanded]="fullWidthNavItems()"
+              class="nav-item nav-item-expanded"
+        >
+          <mat-icon>restaurant_menu_outline</mat-icon>
+          @if (fullWidthNavItems()) {
+            <span>Kuchyňa</span>
+          }
+        </span>
+  </a>
+  <a [routerLink]="'/booking'" class="nav-item-height" mat-list-item routerLinkActive="active">
+        <span [class.nav-item-expanded]="fullWidthNavItems()"
+              class="nav-item nav-item-expanded"
+        >
+          <mat-icon svgIcon="house_icon_ttt"></mat-icon>
+          @if (fullWidthNavItems()) {
+            <span>Ubytovanie</span>
+          }
+        </span>
+  </a>
 </mat-nav-list>

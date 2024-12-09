@@ -7,6 +7,27 @@
   min-width: fit-content;
 }
 
+@media (max-width: 1200px) {
+  .content--flex-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .content--flex-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .content--flex-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 .content--flex-item {
   width: 100%;
   gap: 2.5rem;

@@ -1,2 +1,17 @@
-<app-navigation></app-navigation>
-<!--<app-navigation-item></app-navigation-item>-->
+<mat-sidenav-container autosize="true" hasBackdrop="false">
+  <mat-sidenav (mouseenter)="toggleSideNav(true)"
+               (mouseleave)="toggleSideNav(false)"
+               [class.expanded]="isSidenavOpen()"
+               [class.rail]="!isSidenavOpen()"
+               [opened]="true"
+               class="sidenav-colored expanded rail"
+               mode="over">
+    <app-navigation-list [fullWidthNavItems]="isSidenavOpen"/>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

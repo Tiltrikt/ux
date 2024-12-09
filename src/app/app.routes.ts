@@ -4,8 +4,8 @@ import {KitchenComponent} from '../pages/kitchen/kitchen.component';
 import {BookingComponent} from '../pages/booking/booking.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo: 'about-home', pathMatch: 'full' },
-  {path: 'about-home', component: HomeComponent },
-  {path: 'kitchen', component: KitchenComponent },
-  {path: 'booking', component:  BookingComponent }
+  {path: '', redirectTo: 'about-home', pathMatch: 'full'},
+  {path: 'about-home', component: HomeComponent},
+  {path: 'kitchen', component: KitchenComponent},
+  {path: 'booking', component: BookingComponent}
 ];

@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, forwardRef, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {DateRange} from '@angular/material/datepicker';
 
 @Component({
@@ -14,6 +14,19 @@ export class ContactInfoComponent {
 
   startDate: Date | null = null;
   endDate: Date | null = null;
+  readonly contactForm: FormGroup;
+
+  constructor(private readonly formBuilder: FormBuilder) {
+    this.contactForm = this.formBuilder.group({
+      dateRange: [null, Validators.required],
+      includeBreakfast: [false],
+      firstName: [null, Validators.required],
+      lastName: [null, Validators.required],
+      phoneNumber: [null, Validators.required],
+      email: [null, Validators.compose([Validators.required, Validators.email])],
+      personCount: [null, Validators.compose([Validators.required, Validators.min(1), Validators.max(5)])],
+    });
+  }
 
   onSelect(date: Date | null): void {
     if (!this.startDate || (this.startDate && this.endDate)) {
@@ -28,20 +41,6 @@ export class ContactInfoComponent {
       }
     }
     this.contactForm.controls['dateRange'].setValue(new DateRange<Date>(this.startDate, this.endDate));
-  }
-
-  readonly contactForm: FormGroup;
-
-  constructor(private readonly formBuilder: FormBuilder) {
-    this.contactForm = this.formBuilder.group({
-      dateRange: [null, Validators.required],
-      includeBreakfast: [false],
-      firstName: [null, Validators.required],
-      lastName: [null, Validators.required],
-      phoneNumber: [null, Validators.required],
-      email: [null, Validators.compose([Validators.required, Validators.email])],
-      personCount: [null, Validators.compose([Validators.required, Validators.min(1), Validators.max(5)])],
-    });
   }
 
   onSubmit() {

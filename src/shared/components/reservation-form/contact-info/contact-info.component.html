@@ -1,9 +1,9 @@
 <div class="container--outer">
-  <mat-calendar class="calendar"
-                (selectedChange)="onSelect($event)"
-                [selected]="contactForm.controls['dateRange'].value">
+  <mat-calendar (selectedChange)="onSelect($event)"
+                [selected]="contactForm.controls['dateRange'].value"
+                class="calendar">
   </mat-calendar>
-  <form class="contact-info" (ngSubmit)="onSubmit()" [formGroup]="contactForm" novalidate>
+  <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="contact-info" novalidate>
     <mat-card-content class="input--container-outer">
       <div class="row">
         <mat-form-field appearance="outline" class="full-width">
