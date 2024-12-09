@@ -1,11 +1,11 @@
 <div class="container--outer">
   <div class="container--inner">
     @if (leftImage) {
-      <img class="container--image" [src]="imageAddress" alt="Image not found">
+      <img class="container--image" [src]="imageAddress" [alt]="imageDescription">
       <span class="container--textbox">{{ text }}</span>
     } @else {
       <span class="container--textbox">{{ text }}</span>
-      <img class="container--image" [src]="imageAddress" alt="Image not found">
+      <img class="container--image" [src]="imageAddress" [alt]="imageDescription">
     }
   </div>
   <button [routerLink]="buttonLink" mat-button>{{ buttonText }}</button>

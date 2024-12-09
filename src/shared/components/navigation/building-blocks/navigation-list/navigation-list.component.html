@@ -1,17 +1,17 @@
 <mat-nav-list aria-label="Navigation sidebar" class="nav-list">
 
   @if (fullWidthNavItems()) {
-    <button mat-fab extended class="fab-expanded" [routerLink]="'/booking'" fragment="reservation-form">
+    <button mat-fab extended aria-label="Go to reservation form" class="fab-expanded" [routerLink]="'/booking'" fragment="reservation-form">
       <mat-icon>bed</mat-icon>
       Rezervovať
     </button>
   } @else {
-    <button mat-fab class="fab" [routerLink]="'/booking'">
+    <button mat-fab class="fab" [routerLink]="'/booking'" fragment="reservation-form" aria-label="Go to reservation form">
       <mat-icon>bed</mat-icon>
     </button>
   }
 
-  <a [routerLink]="'/about-home'" class="nav-item-height" mat-list-item routerLinkActive="active">
+  <a [routerLink]="'/about-home'" aria-label="Go to home description page" class="nav-item-height" mat-list-item routerLinkActive="active">
         <span [class.nav-item-expanded]="fullWidthNavItems()"
               class="nav-item nav-item-expanded"
         >
@@ -21,7 +21,7 @@
           }
         </span>
   </a>
-  <a [routerLink]="'/kitchen'" class="nav-item-height" mat-list-item routerLinkActive="active">
+  <a [routerLink]="'/kitchen'" aria-label="Go to restaurant page" class="nav-item-height" mat-list-item routerLinkActive="active">
         <span [class.nav-item-expanded]="fullWidthNavItems()"
               class="nav-item nav-item-expanded"
         >
@@ -31,7 +31,7 @@
           }
         </span>
   </a>
-  <a [routerLink]="'/booking'" class="nav-item-height" mat-list-item routerLinkActive="active">
+  <a [routerLink]="'/booking'" aria-label="Go to reservation page" class="nav-item-height" mat-list-item routerLinkActive="active">
         <span [class.nav-item-expanded]="fullWidthNavItems()"
               class="nav-item nav-item-expanded"
         >

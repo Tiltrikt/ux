@@ -14,6 +14,7 @@ import {RouterLink} from '@angular/router';
 export class LearnMoreContainerComponent {
   @Input() text: string = "";
   @Input() imageAddress: string = "dev.png";
+  @Input() imageDescription: string = "Simple image";
   @Input() leftImage: boolean = true;
   @Input() buttonText: string = "Viac informácií";
   @Input() buttonLink: string = "/";

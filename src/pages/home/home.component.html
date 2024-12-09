@@ -1,9 +1,10 @@
 <app-page-content>
-  <img alt="Home image" class="image--main" src="home.png">
+  <img alt="Home photo" class="image--main" src="home.png">
   <app-page-container [title]="'page.home.section.about.title' | translate">
     <app-learn-more-container
       [text]="'page.home.section.about.description' | translate"
-      imageAddress="about-home.webp">
+      imageAddress="about-home.webp"
+      imageDescription="Photo of house">
     </app-learn-more-container>
   </app-page-container>
   <app-page-container [title]="'page.home.section.kitchen.title' | translate">
@@ -11,13 +12,15 @@
       [buttonLink]="'/kitchen'"
       [leftImage]="false"
       [text]="'page.home.section.kitchen.description' | translate"
-      imageAddress="kitchen.jpg">
+      imageAddress="kitchen.jpg"
+      imageDescription="Dish photo">
     </app-learn-more-container>
   </app-page-container>
   <app-page-container [title]="'page.home.section.reservation.title' | translate">
     <app-learn-more-container
       [buttonLink]="'/booking'"
       [text]="'page.home.section.reservation.description' | translate"
+      imageDescription="Room available for reservation photo"
       imageAddress="room.webp">
     </app-learn-more-container>
   </app-page-container>
