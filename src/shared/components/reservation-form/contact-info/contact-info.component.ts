@@ -22,7 +22,7 @@ export interface ContactFormModel {
   selector: 'app-contact-info',
   templateUrl: './contact-info.component.html',
   styleUrl: './contact-info.component.css',
-  standalone: false,
+  standalone: false
 })
 export class ContactInfoComponent {
 
